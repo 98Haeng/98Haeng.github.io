@@ -1,21 +1,21 @@
 ---
-title: "[포스팅 예시] 이곳에 제목을 입력하세요"
-excerpt: "본문의 주요 내용을 여기에 입력하세요"
+title: "[Paper Review]Test"
+excerpt: "깃허브 테스트용"
 
 categories:
-  - Categories1
+  - recommend
 tags:
-  - [tag1, tag2]
+  - [recommend]
 
-permalink: /categories1/post-name-here/
+permalink: /recommend/recommend_test/
 
 toc: true
 toc_sticky: true
 
-date: 2020-05-21
-last_modified_at: 2021-10-09
+date: 2026-01-22
+last_modified_at: 2026-01-22
 ---
 
 ## 🦥 본문
 
-본문은 여기에 ...
+테스트를 위한 글 작성입니다.

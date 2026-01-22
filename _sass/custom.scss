@@ -1,0 +1,48 @@
+/* 사이드바 전체 기본 글자 크기 (p, li) */
+.sidebar p,
+.sidebar li {
+  font-size: 1.05rem;  /* 원하면 1.1rem까지 */
+}
+
+/* 섹션 타이틀: PaperReview / Algorithm 같은 */
+.nav__sub-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+/* 하위 카테고리: recommend (1) 같은 */
+.nav__items ul li a {
+  font-size: 1.05rem;
+}
+
+/* 프로필 링크: Seoul, Email, GitHub */
+.author__urls a,
+.author__urls li {
+  font-size: 1.05rem;
+}
+
+/* =========================
+   Global Font (icons excluded)
+   ========================= */
+
+   html, body,
+   p, span, div, li, a,
+   h1, h2, h3, h4, h5, h6,
+   button, input, textarea {
+     font-family: "jamsil",
+                  -apple-system,
+                  BlinkMacSystemFont,
+                  "Apple SD Gothic Neo",
+                  "Noto Sans KR",
+                  sans-serif !important;
+   }
+   
+
+
+.author__avatar img {
+    max-width: 140px;   /* 기본 ~80px → 120~160 추천 */
+    width: 140px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 12px;
+  }

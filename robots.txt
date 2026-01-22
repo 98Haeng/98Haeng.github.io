@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://98Haeng.github.io/sitemap.xml
