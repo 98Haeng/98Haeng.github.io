@@ -14,7 +14,8 @@ comments: false
   - [Data Mining and Algorithm Lab](https://sites.google.com/view/hyudatalab/home) (Advisor : Prof. Hyunjoon Kim)
 - B.S in Management Information System, Myongji University
   - Advisor : Prof. Hanjun Lee
----
+
+
 
 ## Awards
 - AI Seoultech Fellowship Master Program (2025.11)
