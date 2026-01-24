@@ -19,10 +19,10 @@ minimal_mistakes_skin: "plum" # "default" "air", "aqua", ...
 
 # Site Settings
 locale: "ko-KR" #"en-US"
-title: Haeng's Blog" # 상단 헤더에 보이는 블로그 명
+title: "Haeng's AI Log" # 상단 헤더에 보이는 블로그 명
 title_separator: "&#124;"
 subtitle: # site tagline that appears below site title in masthead
-name: "Shinhaeng Lee" # 블로그 닉네임 설정
+name: "Haeng's AI Log" # 블로그 닉네임 설정
 description: "Hello:), Welcome to mt blog!" # 블로그 설명
 url: "https://98Haeng.github.io" # 블로그 URL
 baseurl: # the subpath of your site, e.g. "/blog"
