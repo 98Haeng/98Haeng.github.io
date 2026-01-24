@@ -27,7 +27,12 @@ categories:
         url: /categories/nlp/
 
   - title: "Algorithm"
-    url: /categories/algorithm/
+    # url: /categories/algorithm/
+    children:
+          - title: "Baekjoon"
+            url: /categories/baekjoon/
+          - title: "Programmers"
+            url: /categories/programmers/
 
   - title: "Torch"
     url: /categories/torch/
