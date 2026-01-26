@@ -99,7 +99,7 @@ analytics:
 # Site Author
 author:
   name: "Shinhaeng Lee" # 블로그 닉네임
-  avatar: "/assets/images/shl.jpeg" # 블로그 프로필 사진
+  avatar: "/assets/images/me.png" # 블로그 프로필 사진
   bio              : "Hello, Everyone!"
   location         : "Seoul, Korea"
   # email            : "oneman0922@gmail.com"
