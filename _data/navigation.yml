@@ -33,6 +33,8 @@ categories:
             url: /categories/baekjoon/
           - title: "Programmers"
             url: /categories/programmers/
+          - title: "Data Structure & Algorithm"
+            url: /categories/dsal/
 
   - title: "Torch"
     url: /categories/torch/
