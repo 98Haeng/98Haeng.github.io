@@ -123,7 +123,7 @@ print("Output:", tokenizer.decode(output[0]))
 ```
 
 코드에 대한 설명을 하나씩 드리면, 
-```Python
+```python
 def build_trie(candidates, tokenizer):
     trie = {}
     for word in candidates:
@@ -149,7 +149,7 @@ def build_trie(candidates, tokenizer):
 
 그 다음, 
 
-```Python
+```python
 curr_node = trie_root
 for token in tokens_generated_so_far:
     if token in curr_node:
@@ -159,7 +159,7 @@ for token in tokens_generated_so_far:
 ```
 이 코드에서 지금까지 생성된 토큰들이 Trie의 경로를 잘 따라가고, ```curr_node``` 변수는 현재 prefix 위치를 가리킵니다. 여기서 만약 경로를 벗어나게 된다면 (즉, 후보 문자열의 prefix를 생성할 수 없다면), 더 이상 올바른 후보로 완성될 수 없기에 EOS만 허용하여 종료시킵니다.
 
-```Python
+```python
 allowed_next_tokens = [key for key in curr_node.keys() if key != -1]
 if -1 in curr_node:
         allowed_next_tokens.append(tokenizer.eos_token_id)
@@ -170,8 +170,9 @@ if -1 in curr_node:
 복잡할 수 있지만, 간단하게 말하면, 매 스텝마다 허용 토큰을 Trie가 결정합니다. 즉, 다른 단어를 사용하거나, 선택지가 없는 경우 허용 목록에 없어서 선택 불가, 즉 종료합니다.
 
 ## 허용 집합 외 확률 마스킹 방법 예시
+확률을 마스킹하는 부분은 다음과 같은 예시 코드로 작동합니다.
 
-```Python
+```python
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, LogitsProcessor
 
@@ -218,3 +219,4 @@ print(tokenizer.decode(out[0], skip_special_tokens=True))
 ```
 
 해당 코드에서는 ```logits_processor```을 이용해서 모델이 내놓은 점수를 수정하는 방법입니다. 그 이후, 수정된 점수로 다음 토큰을 선택하는 방법입니다.
+
