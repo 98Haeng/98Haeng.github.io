@@ -46,3 +46,158 @@
     margin-top: 20px;
     margin-bottom: 12px;
   }
+
+.about-hero-image {
+  float: right;
+  width: min(38%, 360px);
+  margin: 0 0 1.25rem 1.5rem;
+}
+
+.about-hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.bio-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin: 18px 0 28px;
+}
+
+.bio-card__tag {
+  min-width: 130px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #a400b8 0%, #d100a8 100%);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+}
+
+.bio-card__content {
+  font-size: 1.12rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+  .about-hero-image {
+    float: none;
+    width: min(100%, 320px);
+    margin: 0 0 1rem 0;
+  }
+
+  .bio-card {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .bio-card__tag {
+    min-width: 0;
+    width: fit-content;
+  }
+}
+
+.pub-list {
+  display: grid;
+  gap: 24px;
+}
+
+.pub-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 4px 0;
+}
+
+.pub-item__venue {
+  min-width: 92px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #0c2a6f 0%, #1f4fa8 100%);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(9, 26, 70, 0.2);
+}
+
+.pub-item__content {
+  flex: 1;
+}
+
+.pub-item__title {
+  margin: 0 0 1px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.pub-item__authors,
+.pub-item__meta {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.pub-item__meta a {
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .pub-item {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .pub-item__venue {
+    min-width: 0;
+    width: fit-content;
+  }
+
+  .pub-item__title {
+    font-size: 0.98rem;
+  }
+}
+
+/* Layout width tuning */
+@media (min-width: 1280px) {
+  #main {
+    max-width: 1500px;
+  }
+
+  .sidebar {
+    width: 240px;
+  }
+
+  .layout--single .page,
+  .archive {
+    width: calc(100% - 240px);
+    padding-right: 220px;
+    padding-left: 2em;
+  }
+
+  .sidebar__right {
+    width: 220px;
+    margin-right: -220px;
+    padding-left: 2.5em;
+  }
+}
+
+/* About page: no TOC, so use right space for content */
+@media (min-width: 1024px) {
+  .layout--single.about-wide .page {
+    width: calc(100% - 240px);
+    padding-right: 0;
+  }
+
+  .layout--single.about-wide .page__inner-wrap {
+    max-width: 980px;
+  }
+}
