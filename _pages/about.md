@@ -9,7 +9,7 @@ classes:
 ---
 
 <figure class="about-hero-image">
-  <img src="myimage.jpeg" alt="Shinhaeng Lee profile image">
+  <img src="{{ '/_pages/myimage.jpeg' | relative_url }}" alt="Shinhaeng Lee profile image">
 </figure>
 
 ## Introduce
