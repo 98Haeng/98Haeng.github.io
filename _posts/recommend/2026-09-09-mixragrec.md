@@ -20,6 +20,9 @@ last_modified_at: 2026-09-09
 ### Task : Knowledge-Augmented LLM-based Recommendation
 Knowledge-Augmented LLM-based Recommendation은 사용자의 의도 (요구사항) 및 이전 상호작용 기록과 후보 아이템들이 주어졌을 때, 외부 정보 (Ex, 지식 그래프(KG))에서 관련된 지식을 검색하여 후보 아이템 중에서 사용자가 가장 선호할 만한 아이템을 추천하는 태스크입니다.
 
+<img width="682" height="219" alt="image" src="https://github.com/user-attachments/assets/40e7c414-dca5-4e17-b247-a418ff18fee7" />
+
+
 - 입력 : 사용자 쿼리 + 추천 후보 아이템 집합
   - 사용자 쿼리에는 사용자의 의도, Profile 등이 들어갈 수 있습니다. 이 정보들은 주로 사용자의 이전 상호작용 기록을 통해 만들어집니다.
 - 출력 : 후보 아이템 중 선택한 추천 아이템
@@ -27,6 +30,9 @@ Knowledge-Augmented LLM-based Recommendation은 사용자의 의도 (요구사�
 ## Previous Limitations
 
 기존의 Knowledge-Augmented Recommendation은 모든 사용자 질의에 동일한 Retrieval Granularity를 적용한다는 한계가 있습니다. 하지만 질의마다 추천에 필요한 외부 지식의 양과 구조가 다르기 때문에, 고정된 검색 방식은 다음과 같은 문제를 일으킬 수 있습니다.
+
+<img width="678" height="437" alt="image" src="https://github.com/user-attachments/assets/ef265c47-6670-49e7-b03e-5effd117ee7f" />
+
 
 - **Over-retrieval**
   - LLM만으로도 충분히 답할 수 있는 간단한 질의에도 KG를 검색하거나 큰 규모의 서브그래프를 가져옵니다.
@@ -43,6 +49,8 @@ Knowledge-Augmented LLM-based Recommendation은 사용자의 의도 (요구사�
 
 ## Proposed Method : MixRAGRec
 
+<img width="994" height="529" alt="image" src="https://github.com/user-attachments/assets/f8e7ac9a-4ee4-48ef-a05d-28829bcc1e10" />
+
 MixRAGRec은 서로 다른 역할을 수행하는 세 에이전트를 **Mixture-of-Experts Multi-Agent Policy Optimization(MMAPO)**으로 공동 최적화하는 Multi-Agent LLM-based Recommendation 모델입니다.
 
 - Input : 사용자의 질의(상호작용 이력 포함)와 후보 아이템 집합
@@ -56,6 +64,8 @@ MixRAGRec은 서로 다른 역할을 수행하는 세 에이전트를 **Mixture-
 4. Recommendation Agent가 사용자 질의, 정렬된 지식, 후보 아이템을 바탕으로 최종 아이템을 추천합니다.
 
 ### Mixture-of-Experts Retrieval Agent
+ 
+<img width="502" height="260" alt="image" src="https://github.com/user-attachments/assets/f85e32ea-c1c9-48d0-a9fb-4e2aeef20957" />
 
 Mixture-of-Experts Retrieval Agent는 아이템 중심의 KG에서 구조화된 지식을 검색하는 단계입니다. 사용자 질의마다 필요한 KG 정보의 양과 구조가 다르기 때문에, 서로 다른 Granularity를 가진 네 가지 KG Retrieval 방식을 Expert로 구성하고 질의에 따라 하나를 선택합니다.
 
@@ -186,7 +196,12 @@ Shared Reward는 다음 두 요소로 구성됩니다.
 | LLM-based Recommendation | TallRec, Rec-r1 |
 | KG-RAG Recommendation | KG-Text, KAPING, G-Retriever, K-RagRec |
 
+<img width="967" height="584" alt="image" src="https://github.com/user-attachments/assets/d3ea86cf-de30-40f0-9ed2-7fed1eca160d" />
+
+
 ### Ablation Study
+
+<img width="529" height="729" alt="image" src="https://github.com/user-attachments/assets/5ec47e28-c840-4497-96ba-3137b9cc89d3" />
 
 | Variant | Removed or Modified Component |
 | --- | --- |
