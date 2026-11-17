@@ -12,8 +12,8 @@ permalink: /dsal/slidingwindow/
 toc: true
 toc_sticky: true
 
-date: 2026-11-18
-last_modified_at: 2026-11-18
+date: 2026-11-17
+last_modified_at: 2026-11-17
 ---
 
 # Two Pointer
